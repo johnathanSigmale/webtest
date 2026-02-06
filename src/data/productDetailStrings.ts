@@ -1,0 +1,36 @@
+export const productDetailStrings = {
+  fr: {
+    backToShop: 'Retour à la boutique',
+    arabic: 'العربية',
+    notFound: 'Produit non trouvé',
+    returnToShop: 'Retourner à la boutique',
+    buyNow: 'Acheter maintenant',
+    outOfStock: 'Rupture de stock',
+    inStock: 'En stock',
+    fullDescription: 'Description complète',
+    included: 'Ce qui est inclus',
+    tags: 'Tags',
+    productDetails: 'Détails du produit',
+    availability: 'Disponibilité',
+    price: 'Prix',
+    contactViaWhatsApp: 'Contact via WhatsApp pour l\'achat',
+  },
+  ar: {
+    backToShop: 'العودة إلى المتجر',
+    arabic: 'Français',
+    notFound: 'المنتج غير موجود',
+    returnToShop: 'العودة إلى المتجر',
+    buyNow: 'شراء الآن',
+    outOfStock: 'غير متوفر',
+    inStock: 'متوفر',
+    fullDescription: 'الوصف الكامل',
+    included: 'ما المدرج',
+    tags: 'العلامات',
+    productDetails: 'تفاصيل المنتج',
+    availability: 'التوفر',
+    price: 'السعر',
+    contactViaWhatsApp: 'التواصل عبر WhatsApp للشراء',
+  },
+};
+
+export type ProductDetailStringsKey = keyof typeof productDetailStrings.fr;
