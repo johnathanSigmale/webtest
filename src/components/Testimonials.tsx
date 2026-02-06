@@ -3,9 +3,9 @@ import { Quote } from 'lucide-react';
 const testimonials = [
 {
   quote:
-  "Tafakkur est un cursus pionnier et efficace dans la construction de la personnalité d'une génération de penseurs éduqués et créatifs.",
-  author: 'Dr. Majdouline Enahibi',
-  role: 'Experte internationale en éducation et formation',
+  "Punchway a transformé notre vie de famille. Nous avons retrouvé le plaisir d'être ensemble sans les cris du soir.",
+  author: 'Sihame & Farid',
+  role: 'Parents de 2 enfants',
   color: 'bg-sage-100'
 },
 {
@@ -14,7 +14,22 @@ const testimonials = [
   author: 'Khadija',
   role: 'Maman de Adam, 4 ans',
   color: 'bg-terracotta-100'
-}];
+},
+{
+  quote:
+  `Le programme Tafakkur est l'un de mes préférés, car il est holistique et aborde tous les aspects de la personnalité de l'enfant. Il répond également à une question devenue très urgente pour les parents : Comment puis-je mieux gérer l'éducation de mon enfant ?`,
+  author: 'Saad',
+  role: 'Papa',
+  color: 'bg-terracotta-100'
+},
+{
+  quote:
+  "Tafakkur est un cursus pionnier et efficace dans la construction de la personnalité d’une génération de penseurs éduqués, créatifs, conscients de leurs êtres respectifs, aimant leur entourage proactifs et imprégnés des valeurs du bien et du don.",
+  author: 'Dr. Majdouline Enahibi',
+  role: 'Experte internationale en éducation et formation',
+  color: 'bg-sage-100'
+},
+];
 
 export function Testimonials() {
   return (

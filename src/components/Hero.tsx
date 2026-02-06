@@ -49,7 +49,7 @@ export function Hero() {
             }}>
 
             <a className="inline-flex gap-5 px-4 py-1.5 rounded-full bg-sage-100 text-sage-700 font-semibold text-sm mb-6 hover:shadow-md transition-shadow" href='https://www.tafakkur.com' target='_blank'>
-              <div className='my-auto'>Partenaire officiel Tafakkur</div>
+              <div className='my-auto'>Représentant exclusif du centre Tafakkur au Maroc</div>
               <ImageWithLoader src='/partenaires/tafakkur.webp' className='h-12 drop-shadow hidden md:block' />
             </a>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-charcoal-800 leading-tight mb-6">

@@ -78,13 +78,21 @@ export function ProductDetailPage() {
 
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className='mb-6 flex gap-5'>
+              <div className='mb-6 flex gap-5 items-center'>
                 <product.icon size={40} className='bg-terracotta-100 text-terracotta-700 p-2 rounded-xl' />
-                <button
-                  onClick={() => changeFr(!fr)}
-                  className="px-4 py-2 rounded-full bg-terracotta-100 text-terracotta-700 font-semibold text-sm hover:bg-terracotta-200 transition-colors">
-                  {fr ? t.arabic : 'Français'}
-                </button>
+                <label className="flex items-center gap-3 cursor-pointer bg-cream-200 px-4 py-2 rounded-full border-2 border-cream-300">
+                  <span className={`text-sm font-bold transition-colors ${fr ? 'text-charcoal-800' : 'text-charcoal-400'}`}>FR</span>
+                  <input 
+                    type="checkbox" 
+                    checked={!fr}
+                    onChange={(e) => changeFr(!e.target.checked)}
+                    className="hidden peer"
+                  />
+                  <div className="relative w-14 h-7 bg-gradient-to-r from-sage-300 to-terracotta-300 rounded-full peer-checked:from-terracotta-300 peer-checked:to-sage-300 transition-all shadow-md">
+                    <div className="absolute top-1 left-1 w-5 h-5 bg-white rounded-full peer-checked:left-7 transition-all shadow-sm font-semibold text-xs flex items-center justify-center"></div>
+                  </div>
+                  <span className={`text-sm font-bold transition-colors ${!fr ? 'text-charcoal-800' : 'text-charcoal-400'}`}>AR</span>
+                </label>
               </div>
               
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-charcoal-800 mb-4">

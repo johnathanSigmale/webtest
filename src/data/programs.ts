@@ -85,9 +85,9 @@ export const programs: Program[] = [
   },
   {
     id: 'tafakkur-famille',
-    title: 'Formation Éducative Familles',
+    title: 'Formations Éducatives Familles',
     description:
-      'Des formations assuréees par le centre Tafakkur destinées aux parents.',
+      `Nos formations couvrent des domaines essentiels : discipline positive, pédagogie créative, développement de l'intelligence et construction d'une mentalité de réussite.`,
     apropos: `
     Les formations Tafakkur pour les familles offrent aux parents les outils et les connaissances nécessaires pour accompagner efficacement le développement de leurs enfants. Chaque formation couvre des domaines essentiels : discipline positive, pédagogie créative, développement de l'intelligence et construction d'une mentalité de réussite. Ces formations complémentaires permettent aux parents de créer un environnement familial épanouissant et éducatif.
     `,
@@ -111,8 +111,8 @@ export const programs: Program[] = [
   },
   {
     id: 'tafakkur-ecoles',
-    title: 'Formation Éducative Écoles',
-    comment: '*Formation certifiante',
+    title: 'Formations Éducatives Écoles',
+    comment: '*Formations certifiantes',
     image: '/programmes/formation-ecoles.webp',
     brochure: '/brochures/brochure-formation-ecoles.pdf',
     description:

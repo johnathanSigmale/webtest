@@ -101,7 +101,7 @@ export function TrustIndicators() {
             Ils nous font confiance
           </h2>
           <p className="text-charcoal-600 max-w-2xl mx-auto">
-            Écoles, associations et organisations qui nous accompagnent dans notre mission
+            Écoles, associations et organisations qui nous font confiance dans notre mission
             d'accompagnement familial et éducatif.
           </p>
         </motion.div>
