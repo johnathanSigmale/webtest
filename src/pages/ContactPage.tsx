@@ -35,7 +35,7 @@ export function ContactPage() {
         'service_5hqf866', 
         'template_pbuxl5o',
         formData,
-        '-Aw6aGIzBV3isK8Pm'
+        'Aw6aGIzBV3isK8Pm'
       )
       .then(() => {
         alert('Message sent successfully!');
