@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { products } from '../data/products';
+import { productsfr } from '../data/products';
 import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 export function ProductsPage() {
@@ -23,7 +23,7 @@ export function ProductsPage() {
         {/* Products Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="popLayout">
-            {products.map((product) =>
+            {productsfr.map((product) =>
               <motion.div
                 layout
                 key={product.id}

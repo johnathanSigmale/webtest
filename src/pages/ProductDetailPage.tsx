@@ -1,11 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, BookOpen, CheckCircle, ShoppingCart } from 'lucide-react';
 import { Button } from '../components/ui/Button';
-import { products } from '../data/products';
+import { productsar, productsfr } from '../data/products';
 import ImageWithLoader from '../components/ui/ImageWithLoader';
+import { useState } from 'react';
 
 export function ProductDetailPage() {
   const { slug } = useParams();
+  const [ fr, changeFr ] = useState(true);
+  const products = fr ? productsfr : productsar
   const product = products.filter((p) => p.id == slug)[0];
   
   if (!product) {
@@ -25,8 +28,8 @@ export function ProductDetailPage() {
 
   return (
     <div className="pt-20 min-h-screen bg-cream-50">
-      {/* Back Link */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      {/* Back Link + Language Toggle */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex items-center justify-between">
         <Link
           to="/produits"
           className="inline-flex items-center text-charcoal-600 hover:text-terracotta-600 transition-colors font-medium">
@@ -79,8 +82,13 @@ export function ProductDetailPage() {
 
           <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <div className='mb-6'>
+              <div className='mb-6 flex gap-5'>
                 <product.icon size={40} className='bg-terracotta-100 text-terracotta-700 p-2 rounded-xl' />
+                <button
+                  onClick={() => changeFr(!fr)}
+                  className="px-4 py-2 rounded-full bg-terracotta-100 text-terracotta-700 font-semibold text-sm hover:bg-terracotta-200 transition-colors">
+                  {fr ? 'العربية' : 'Français'}
+                </button>
               </div>
               
               <h1 className="text-4xl md:text-5xl font-heading font-bold text-charcoal-800 mb-4">

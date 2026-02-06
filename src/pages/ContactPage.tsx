@@ -156,7 +156,7 @@ export function ContactPage() {
                   <div className="w-12 h-12 rounded-full bg-cream-200 flex items-center justify-center text-charcoal-600 shrink-0">
                     <MapPin size={24} />
                   </div>
-                  <div>
+                  <a href='https://maps.app.goo.gl/SADkCz86vSgHGkuw8' className=' hover:shadow-md'> 
                     <h3 className="font-heading font-bold text-charcoal-800 text-lg">
                       Adresse
                     </h3>
@@ -167,7 +167,7 @@ export function ContactPage() {
                       <br />
                       Casablanca, Maroc
                     </p>
-                  </div>
+                  </a>
                 </div>
               </div>
 
