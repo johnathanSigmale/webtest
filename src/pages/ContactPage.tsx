@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Check } from 'lucide-react';
 import { Facebook, Instagram } from '../components/ui/icons';
 import { Button } from '../components/ui/Button';
 import { useState } from 'react';
@@ -13,6 +13,9 @@ export function ContactPage() {
     subject: '',
     message: ''
   });
+
+  const [isSending, setIsSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const cities = [
     'Casablanca',
@@ -30,15 +33,16 @@ export function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSending(true);
+
     emailjs
       .send(
         'service_5hqf866', 
-        'template_pbuxl5o',
+        'template_5e9p2en',
         formData,
-        'Aw6aGIzBV3isK8Pm'
+        '-Aw6aGIzBV3isK8Pm'
       )
       .then(() => {
-        alert('Message sent successfully!');
         setFormData({
           name: '',
           email: '',
@@ -47,9 +51,13 @@ export function ContactPage() {
           subject: '',
           message: ''
         });
+        setIsSending(false);
+        setSent(true);
+        setTimeout(() => setSent(false), 3000);
       })
-      .catch(() => {
-        alert('Failed to send message. Please try again.');
+      .catch((e) => {
+        console.log(e)
+        setIsSending(false);
       });
   };
 
@@ -324,11 +332,25 @@ export function ContactPage() {
                   </textarea>
                 </div>
 
-                <Button type="submit" className="w-full group" size="lg">
-                  Envoyer le message
-                  <Send
-                    size={18}
-                    className="ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button type="submit" className={`w-full group transition-colors ${sent ? 'bg-green-600 text-white' : ''}`} size="lg" variant={sent ? 'nothing' : 'primary'} disabled={isSending}>
+                  {!sent ? (
+                    <span className="flex items-center justify-center">
+                      <span className="mr-2">Envoyer le message</span>
+                      <motion.span
+                        animate={isSending ? { rotate: 360 } : { rotate: 0 }}
+                        transition={isSending ? { repeat: Infinity, duration: 0.8, ease: 'linear' } : { duration: 0 }}
+                        className="ml-2">
+                        <Send size={18} />
+                      </motion.span>
+                    </span>
+                  ) : (
+                    <span className="flex items-center justify-center">
+                      <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 300 }} className="mr-2">
+                        <Check size={18} />
+                      </motion.span>
+                      Envoyé
+                    </span>
+                  )}
 
                 </Button>
               </form>

@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, BookOpen, CheckCircle, ShoppingCart } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { products } from '../data/products';
+import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 export function ProductDetailPage() {
   const { slug } = useParams();
@@ -118,7 +119,7 @@ export function ProductDetailPage() {
             <div className="relative">
               <div className="aspect-square rounded-3xl bg-cream-100 flex items-center justify-center overflow-hidden">
                 {product.image ? (
-                  <img src={product.image} alt={product.title} className='w-full h-full object-cover' />
+                  <ImageWithLoader src={product.image} alt={product.title} className='w-full h-full object-cover' />
                 ) : (
                   <product.icon size={120} className='text-cream-300' />
                 )}

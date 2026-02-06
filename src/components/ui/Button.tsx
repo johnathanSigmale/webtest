@@ -3,7 +3,7 @@ import { Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   to?: string,
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'nothing';
   size?: 'sm' | 'md' | 'lg';
   isLoading?: boolean;
 }
@@ -25,7 +25,8 @@ export function Button({
     'bg-sage-500 text-white hover:bg-sage-600 shadow-md hover:shadow-lg focus:ring-sage-500',
     outline:
     'border-2 border-terracotta-500 text-terracotta-600 hover:bg-terracotta-50 focus:ring-terracotta-500',
-    ghost: 'text-charcoal-700 hover:bg-cream-200 hover:text-terracotta-600'
+    ghost: 'text-charcoal-700 hover:bg-cream-200 hover:text-terracotta-600',
+    nothing: '',
   };
   const sizes = {
     sm: 'px-4 py-2 text-sm',

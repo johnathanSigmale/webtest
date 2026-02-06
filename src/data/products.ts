@@ -7,7 +7,7 @@ export interface Product {
   description: string;
   longDescription?: string;
   icon: LucideIcon;
-  image?: string;
+  image: string;
   price: string;
   features?: string[];
   inStock?: boolean;

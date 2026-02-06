@@ -16,7 +16,7 @@ export interface Program {
   icon: LucideIcon;
   brochure?: string;
   tags: string[];
-  image?: string;
+  image: string;
   objectifs?: string[];
   modules?: Module[];
   features?:string[];
@@ -91,7 +91,7 @@ export const programs: Program[] = [
     apropos: `
     Les formations Tafakkur pour les familles offrent aux parents les outils et les connaissances nécessaires pour accompagner efficacement le développement de leurs enfants. Chaque formation couvre des domaines essentiels : discipline positive, pédagogie créative, développement de l'intelligence et construction d'une mentalité de réussite. Ces formations complémentaires permettent aux parents de créer un environnement familial épanouissant et éducatif.
     `,
-    image: '/programmes/formation-familles.webp',
+    image: '/programmes/formation-familles.avif',
     modules: [
       {title: '1- Discipline Positive et Apaisement du Comportement', content: '• 26 heures réparties sur 13 séances\n• 2400dhs'},
       {title: `2- Pédagogie pour une Personnalité Créative et Éthique`, content: '• 28 heures réparties sur 14 séances\n• 2400dhs'},

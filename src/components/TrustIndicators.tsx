@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import ImageWithLoader from './ui/ImageWithLoader'
 
 const trustedOrganizations = [
   {
@@ -125,7 +126,7 @@ export function TrustIndicators() {
                 className="flex-shrink-0 transition-all duration-300"
               >
                 <div className="w-32 bg-cream-100 rounded-lg flex items-center justify-center border border-cream-200">
-                  <img src={org.logo} alt={org.name} title={org.name}/>
+                  <ImageWithLoader src={org.logo} alt={org.name} title={org.name}/>
                 </div>
               </div>
             ))}

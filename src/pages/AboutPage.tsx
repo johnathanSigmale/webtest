@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import {
   Heart,
   Users,
-  Baby,
   GraduationCap,
   School,
   AlertCircle,
@@ -19,6 +18,8 @@ import {
 } from 'lucide-react'
 import { Button } from '../components/ui/Button'
 import { Link } from 'react-router-dom'
+import { BoySvg } from '../components/ui/icons'
+import ImageWithLoader from '../components/ui/ImageWithLoader'
 const challenges = [
   {
     icon: Frown,
@@ -58,7 +59,7 @@ const audiences = [
     label: 'Futurs parents',
   },
   {
-    icon: Baby,
+    icon: BoySvg,
     label: 'Enfants',
   },
   {
@@ -126,6 +127,7 @@ const offers = [
   },
 ]
 export function AboutPage() {
+  // small local component to show loader until image loads
   return (
     <div className="pt-20">
       {/* Hero - Pourquoi PUNCH WAY */}
@@ -344,7 +346,7 @@ export function AboutPage() {
                 }}
                 className="flex items-center gap-3 bg-white px-6 py-4 rounded-full shadow-sm border border-cream-200"
               >
-                <audience.icon size={20} className="text-terracotta-500" />
+                <audience.icon size={20} className="text-terracotta-500 min-w-6" />
                 <span className="font-medium text-charcoal-800">
                   {audience.label}
                 </span>
@@ -531,7 +533,9 @@ export function AboutPage() {
             >
               <div className="aspect-[4/5] rounded-4xl overflow-hidden bg-cream-100 relative z-10">
                 <div className="absolute inset-0 bg-gradient-to-br from-sage-100 to-cream-200 flex items-center justify-center">
-                  <img src='mom3.jpeg' />
+                  {/* Loader until image is ready */}
+                  {/** Using local state `imgLoaded` to toggle visibility */}
+                  <ImageWithLoader src="mom3.jpeg" alt="Hind Serraj" />
                 </div>
               </div>
               {/* Decorative elements */}

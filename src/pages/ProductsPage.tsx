@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { products } from '../data/products';
+import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 export function ProductsPage() {
 
@@ -61,7 +62,7 @@ export function ProductsPage() {
                 {/* Product Image */}
                 {product.image && (
                   <div className="mb-6 aspect-square rounded-2xl bg-cream-100 flex items-center justify-center overflow-hidden">
-                    <img src={product.image} alt={product.title} className="w-full h-full object-cover" />
+                    <ImageWithLoader src={product.image} alt={product.title} className="w-full h-full object-cover" />
                   </div>
                 )}
 

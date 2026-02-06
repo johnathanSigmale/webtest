@@ -1,6 +1,7 @@
 import { Button } from './ui/Button';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import ImageWithLoader from './ui/ImageWithLoader';
 export function Hero() {
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-cream-50">
@@ -47,8 +48,9 @@ export function Hero() {
               ease: 'easeOut'
             }}>
 
-            <a className="inline-block px-4 py-1.5 rounded-full bg-sage-100 text-sage-700 font-semibold text-sm mb-6 hover:shadow-md transition-shadow" href='https://www.tafakkur.com' target='_blank'>
-              Partenaire officiel Tafakkur
+            <a className="inline-flex gap-5 px-4 py-1.5 rounded-full bg-sage-100 text-sage-700 font-semibold text-sm mb-6 hover:shadow-md transition-shadow" href='https://www.tafakkur.com' target='_blank'>
+              <div className='my-auto'>Partenaire officiel Tafakkur</div>
+              <ImageWithLoader src='/partenaires/tafakkur.webp' className='h-12 drop-shadow hidden md:block' />
             </a>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-charcoal-800 leading-tight mb-6">
               Accompagner chaque famille vers son{' '}

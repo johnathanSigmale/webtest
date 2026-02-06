@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Users, Baby, School } from 'lucide-react';
+import { Users, School } from 'lucide-react';
+import { BoySvg } from './ui/icons';
 const audiences = [
 {
   id: 'mamans',
@@ -15,7 +16,7 @@ const audiences = [
   title: 'Pour les Enfants',
   description:
   'Des outils ludiques pour gérer les émotions et grandir sereinement.',
-  icon: Baby,
+  icon: BoySvg,
   color: 'sage',
   delay: 0.1
 },
@@ -69,7 +70,7 @@ export function AudienceCards() {
               <div
               className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-colors duration-300 ${item.color === 'terracotta' ? 'bg-terracotta-100 text-terracotta-600 group-hover:bg-terracotta-200' : 'bg-sage-100 text-sage-600 group-hover:bg-sage-200'}`}>
 
-                <item.icon size={32} strokeWidth={1.5} />
+                <item.icon size={32} strokeWidth={1.5} className='max-w-12'/>
               </div>
               <h3 className="text-2xl font-heading font-bold text-charcoal-800 mb-3">
                 {item.title}

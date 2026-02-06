@@ -3,6 +3,7 @@ import { Clock, Users, CheckCircle, ArrowLeft, BookOpen, Target } from 'lucide-r
 import { Button } from '../components/ui/Button';
 import { programs } from '../data/programs';
 import { WhatsApp } from '../components/ui/icons';
+import ImageWithLoader from '../components/ui/ImageWithLoader';
 
 export function ProgramDetailPage() {
   const { slug } = useParams();
@@ -118,7 +119,7 @@ export function ProgramDetailPage() {
 
             <div className="relative">
               <div className="aspect-square rounded-3xl bg-sage-100 flex items-center justify-center">
-                <img src={program.image} className='h-5/6 object-cover rounded-md'/>
+                <ImageWithLoader src={program.image} className='h-full w-full object-cover rounded-md'/>
               </div>
             </div>
           </div>
